@@ -1,0 +1,6 @@
+
+virtual/
+*.pyc
+.env
+migrations/
+

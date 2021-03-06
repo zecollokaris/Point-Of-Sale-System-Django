@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+# Stock models here.
 class Stock(models.Model):
 	category = models.CharField(max_length=50, blank=True, null=True)
 	item_name = models.CharField(max_length=50, blank=True, null=True)
@@ -16,5 +16,6 @@ class Stock(models.Model):
 	last_updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 	export_to_CSV = models.BooleanField(default=False)
 
+	#Displays Names of Item & Quantity in Admin Section.
 	def __str__(self):
-		return self.item_name
+		return self.item_name + ' ' + str(self.quantity)

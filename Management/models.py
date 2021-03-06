@@ -16,6 +16,6 @@ class Stock(models.Model):
 	last_updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 	export_to_CSV = models.BooleanField(default=False)
 
-	#Displays Names of Item & Quantity in Admin Section.
+	#Displays Names of Item & Quantity in Admin Section
 	def __str__(self):
 		return self.item_name + ' ' + str(self.quantity)

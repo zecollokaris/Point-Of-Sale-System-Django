@@ -46,12 +46,12 @@ def list_items(request):
 
 #Add Items page view function
 def add_items(request):
-	form = StockCreateForm(request.POST or None)
-	if form.is_valid():
-		form.save()
-        
-	context = {
+    form = StockCreateForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('/list_items')
+    context = {
 		"form": form,
 		"title": "Add Item",
 	}
-	return render(request, "Management/add_items.html", context)
+    return render(request, "Management/add_items.html", context)

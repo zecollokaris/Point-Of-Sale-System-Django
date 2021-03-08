@@ -40,7 +40,7 @@ urlpatterns = [
 
     #This is the List of Items page url pattern 
     path('list_items/', views.list_items, name='list_items'),
-]
+
 
 #################################################################################################################################################################################
 #URL FOR ADD ITEMS PAGE VIEW FUNCTION
@@ -49,5 +49,5 @@ urlpatterns = [
     #ADD ITEMS Page url!
 
     #This is the Add Items page url pattern 
-    path('add_items', views.add_items, name='add_items'),
+    path('add_items/', views.add_items, name='add_items'),
 ]

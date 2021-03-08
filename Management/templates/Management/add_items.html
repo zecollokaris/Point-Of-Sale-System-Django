@@ -1,0 +1,18 @@
+{% extends 'Management/base.html' %}
+{% load static%} 
+{% load bootstrap4 %} 
+
+{% block content %} 
+<!-- ADD ITEMS HTML PAGE -->
+
+<h1>{{title}}</h1> 
+
+    <!-- Creates Submit Action In DataBase -->
+    <form method='POST' action=''>{% csrf_token %}
+        {{form}}
+        <input type="submit" value='Save'/>
+    </form>
+
+
+<!--COLLAPSE ADD ITEMS HTML PAGE -->
+{%endblock%}

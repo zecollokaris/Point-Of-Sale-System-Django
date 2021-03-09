@@ -5,16 +5,32 @@
 {% block content %} 
 <!-- LIST OF ITEMS HTML PAGE -->
 
-
+<link rel="stylesheet" href="{% static 'css/Management.css' %}">
 <h1>{{title}}</h1> 
 
 {{title}}<br>
 
 
-<!-- Loop To Get Itemname and Quantity In Database -->
-{% for instance in queryset %}
-{{instance.item_name}}, {{instance.quantity}}<br>
-{% endfor %}
+
+<table class='table'>
+    <thead>
+      <tr>
+        <th>COUNT</th>
+        <th>CATEGORY</th>
+        <th>ITEM NAME</th>
+        <th>QUANTITY IN STORE</th>
+      </tr>
+    </thead>
+    <!-- Loop To Get Itemname and Quantity In Database -->
+  {% for instance in queryset %}
+      <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{instance.category}}</td>
+        <td>{{instance.item_name}}</td>
+        <td>{{instance.quantity}}</td>
+      </tr>
+  {% endfor %}
+</table>
 
 
 <!-- COLLAPSE LIST OF ITEMS HTML PAGE -->

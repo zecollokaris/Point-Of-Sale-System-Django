@@ -3,3 +3,31 @@ body {
     min-height: 75rem;
 }
  
+
+/* ######################################################################################### */
+
+                                    /* LIST OF ITEMS PAGE */
+
+/*Align the title to the center of the page*/
+.table{
+	font-size: 13px;
+	text-align: center;
+	width: 95%;
+	margin: auto;
+}
+
+/*Make alternating colors for the table rows*/
+.table tr:nth-child(odd){
+	background: #B8CAE4
+}
+
+.table tr:nth-child(even){
+	background: #dae5f4
+}
+
+th {
+  background-color: #337ab7;
+  color: white;
+}
+
+/* ######################################################################################### */

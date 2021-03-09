@@ -13,13 +13,18 @@
     {% endblock %}
 </head>
 <body>
+{% include 'Management/navbar.html' %}
 {%block content%} 
 {% endblock %}
 {% block scripts %}
+
 <script src="{% static 'js/app.js' %}"></script>
+<script src="{% static 'js/bundle.js' %}"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> {% bootstrap_javascript %} {% endblock %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+{% bootstrap_javascript %} 
+{% endblock %}
 </body>
 </html>
 

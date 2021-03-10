@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 
 from .models import *
 
-from .forms import StockCreateForm 
+from .forms import StockCreateForm, StockSearchForm
 
 
 #---------------------------------------------------------------------#
@@ -31,13 +31,24 @@ def index(request):
 
 #List of Items page view function
 def list_items(request):
-    title = 'List of list_items'
+    ListHeader = 'List of Items'
+    form = StockSearchForm(request.POST or None)
     # Queryset to get Stock Objects from Database
     queryset = Stock.objects.all()
     context = {
-	"title": title,
-    "queryset": queryset,
+        "ListHeader": ListHeader,
+        "queryset": queryset,
+        "form": form,
 	}
+    # Executes Search Once All Conditions Are Met
+    if request.method == 'POST':
+        queryset = Stock.objects.filter(item_name__icontains=form['item_name'].value()
+        )
+        context = {
+        "form": form,
+        "ListHeader": ListHeader,
+        "queryset": queryset,
+        }
     return render(request, "Management/list_items.html",context)
 
 #################################################################################################################################################################################

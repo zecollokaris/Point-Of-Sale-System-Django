@@ -6,11 +6,14 @@
 <!-- LIST OF ITEMS HTML PAGE -->
 
 <link rel="stylesheet" href="{% static 'css/Management.css' %}">
-<h1>{{title}}</h1> 
-
-{{title}}<br>
+<div class="ListHeader">{{ListHeader}}</div> 
 
 
+<form method='POST' action=''>{% csrf_token %}
+    {{form}}
+        <input type="submit" value='Search'/>
+</form>
+<br>
 
 <table class='table'>
     <thead>

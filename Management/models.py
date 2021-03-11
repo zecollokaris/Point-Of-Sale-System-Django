@@ -1,8 +1,22 @@
 from django.db import models
 
+category_choice = (
+		('Furniture', 'Furniture'),
+		('IT Equipment', 'IT Equipment'),
+		('Phone', 'Phone'),
+		('Electronics', 'Electronics'),
+	)
+
+
+# Adds Category To Database if New Category is Created
+class Category(models.Model):
+	name = models.CharField(max_length=50, blank=True, null=True)
+	def __str__(self):
+		return self.name
+
 # Stock models here.
 class Stock(models.Model):
-	category = models.CharField(max_length=50, blank=False, null=True)
+	category = models.category = models.ForeignKey(Category, on_delete=models.CASCADE)
 	item_name = models.CharField(max_length=50, blank=False, null=True)
 	quantity = models.IntegerField(default='0', blank=False, null=True)
 	receive_quantity = models.IntegerField(default='0', blank=True, null=True)

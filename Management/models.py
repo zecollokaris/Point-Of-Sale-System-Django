@@ -28,6 +28,7 @@ class Stock(models.Model):
 	created_by = models.CharField(max_length=50, blank=True, null=True)
 	reorder_level = models.IntegerField(default='0', blank=True, null=True)
 	last_updated = models.DateTimeField(auto_now_add=False, auto_now=True)
+	timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
 	export_to_CSV = models.BooleanField(default=False)
 
 	#Displays Names of Item & Quantity in Admin Section

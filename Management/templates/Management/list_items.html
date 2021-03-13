@@ -5,7 +5,17 @@
 {% block content %} 
 <!-- LIST OF ITEMS HTML PAGE -->
 
-<link rel="stylesheet" href="{% static 'css/Management.css' %}">
+<link href="{% static 'css/Management.css' %}" rel="stylesheet">
+
+<!-- Loop To Display Success Message -->
+{% if messages %}
+<ul class="messages">
+       {% for message in messages %}
+             <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+       {% endfor %}
+</ul>
+{% endif %}
+
 <div class="ListHeader">{{ListHeader}}</div> 
 
 
@@ -22,6 +32,7 @@
         <th>CATEGORY</th>
         <th>ITEM NAME</th>
         <th>QUANTITY IN STORE</th>
+        <th>TIME STAMP</th>
       </tr>
     </thead>
     <!-- Loop To Get Itemname and Quantity In Database -->
@@ -29,8 +40,9 @@
       <tr>
         <td>{{forloop.counter}}</td>
         <td>{{instance.category}}</td>
-        <td>{{instance.item_name}}</td>
+        <td><a href="{% url 'stock_detail' instance.id %}">{{instance.item_name}}</a></td>
         <td>{{instance.quantity}}</td>
+        <td>{{instance.timestamp}}</td>
       </tr>
   {% endfor %}
 </table>

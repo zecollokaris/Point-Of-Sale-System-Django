@@ -1,4 +1,4 @@
-# PosSystem
+#                                                     POINT OF SALE SYSTEM
 
 ## Description
 This is a Point Of Sale System that tracks the stock in a shop and users
@@ -46,9 +46,15 @@ This is a Point Of Sale System that tracks the stock in a shop and users
 # Technologies Used
 
 -HTML5
+
 -CSS
+
 -Bootstarap
+
 -Python3.8
+
 -Django 3.1.7
+
 -Psycopg2
+
 -PostgreSQL

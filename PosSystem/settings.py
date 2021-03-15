@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    'registration',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -126,3 +127,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+
+ACCOUNT_ACTIVATION_DAYS = 7 # One-Week Activation Expiry
+REGISTRATION_AUTO_LOGIN = True # Automatically Log the User In.
+SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'

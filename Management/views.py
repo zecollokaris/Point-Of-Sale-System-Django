@@ -6,6 +6,8 @@ from .forms import *
 
 from django.contrib import messages
 
+from django.contrib.auth.decorators import login_required
+
 #---------------------------------------------------------------------#
 '''End Of Import'''
 #---------------------------------------------------------------------#
@@ -31,6 +33,7 @@ def index(request):
 #################################################################################################################################################################################
 
 #List of Items page view function
+@login_required
 def list_items(request):
     ListHeader = 'List of Items'
     form = StockSearchForm(request.POST or None)
@@ -58,6 +61,7 @@ def list_items(request):
 #################################################################################################################################################################################
 
 #Add Items page view function
+@login_required
 def add_items(request):
     form = StockCreateForm(request.POST or None)
     if form.is_valid():

@@ -9,18 +9,21 @@
 
     {%block styles%}
     {%bootstrap_css%}
-    <link rel="stylesheet" href="{% static 'css/Management.css' %}">
-    <link rel="stylesheet" href="{% static 'css/Navar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/management.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    <script src="{% static 'js/App.js' %}"></script> 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
     {% endblock %}
 </head>
 <body>
-{% include 'Management/navbar.html' %}
+{% include 'Management/nav.html' %}
 {%block content%} 
 {% endblock %}
 {% block scripts %}
 
 
-<script src="{% static 'js/app.js' %}"></script> 
+
+
 {% bootstrap_javascript %} 
 {% endblock %}
 </body>

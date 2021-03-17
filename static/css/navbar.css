@@ -1,0 +1,228 @@
+
+/* 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Signika', sans-serif;
+*/
+
+/* ################################################################################################################# */
+/* ################################################################################################################# */
+/* NAV BAR STYLE */
+/* ################################################################################################################# */
+/* ##################################################################################### */
+/* ### NAV BAR ### */
+/* (Whole Nav Bar Settings & Features) */
+/* ##################################################################################### */
+
+/* Whole Nav Bar Text Setting   */
+a {
+  color: #111;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(224, 18, 18);
+  text-decoration: none;
+}
+
+li {
+  color: #111;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 12px;
+  position: relative;
+}
+
+li:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: black;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+li:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+
+/* ##################################################################################### */
+/* TRANSPARENT NAV BAR */
+/* (Nav Bar Before Sroll when it has A Transparent Background) */
+/* ##################################################################################### */
+
+/* Transparent Nav-Bar Positioning  */
+.header1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 80px;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Transparent Nav-Bar Menu Positioning  */
+.header1 nav {
+  position: absolute;
+  right: 60px;
+  top: 0;
+  /* Create Padding Spacing In Menu Nav Bar */
+  padding: 20px 70px;
+}
+
+/* Transparent Nav Bar Logo Setting */
+a.identity img {
+  position: absolute;
+  left: 60px;
+  width: 60px;
+  padding: 10px 90px 5px;
+  transition: 1s ease;
+  opacity: 1;
+}
+/* Transparent Nav Bar Logo Opacity On (HOVER) */
+a.identity:hover img {
+  opacity: 0.6;
+}
+
+/* ###   FONT SETTING   ### */
+/* Transparent Nav Bar Text Setting */
+.header1 {
+  font-size: 15px;
+  font-family: "Josefin Slab", serif;
+}
+
+/* Transparent Nav Bar (Border Line) */
+.header1 {
+  border-bottom: 0 solid transparent;
+  /* Sets Width Of Nav Bar Border Line */
+  border-bottom-width: 1px;
+  /* Black Border Incase of Dark Background */
+  border-color: rgba(0, 0, 0, 0.2);
+  /* White Border Incase of Dark Background */
+  /* border-color: rgba(255, 255, 255, 0.2); */
+}
+
+/* ############################################################ */
+/* ############################################################ */
+/* COLAPSE STYLER FOR TRANSPARENT NAV BAR BODY */
+/* ############################################################ */
+/* ##################################################################################### */
+/* WHITE NAV BAR */
+/* (White Nav Bar After Sroll when it has A White Background) */
+/* ##################################################################################### */
+
+/* Reveal White Nav Bar on Scroll and Settings */
+#sticky_nav {
+  background: white;
+  width: 100%;
+  top: -100px;
+  display: block;
+  position: fixed;
+  z-index: 999;
+  transition: all 1s ease;
+}
+/* White Nav Bar on Scroll Animation & Setting */
+.header2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 9999;
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  font-family: "Josefin Slab", serif;
+  box-shadow: 0 8px 6px -6px #000;
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
+  -webkit-animation: header2 0.95s ease forwards;
+  animation: header2 1.25s ease forwards;
+}
+
+/* Transparent Nav-Bar Menu Positioning  */
+.header2 nav {
+  position: absolute;
+  right: 60px;
+  top: 0;
+  /* Create Spacing In Menu Nav Bar */
+  padding: 20px 70px;
+}
+
+/* White Nav Bar Logo Setting */
+.dentity img {
+  transition: 1s ease;
+  opacity: 1;
+}
+/* Transparent Nav Bar Logo Opacity On (HOVER) */
+.dentity img {
+  position: absolute;
+  left: 60px;
+  width: 20px;
+  padding: 10px 10px 0px;
+  transition: 1s ease;
+  opacity: 1;
+}
+/* ###   FONT SETTING   ### */
+/* White Nav Bar Text Setting */
+.header2 {
+  font-size: 15px;
+  font-family: "Josefin Slab", serif;
+}
+
+/* ############################################################ */
+/* COLAPSE STYLER FOR WHITE NAV BAR BODY */
+/* ############################################################ */
+/* ################################################################################################################## */
+
+/* ############################################### */
+/* SUBMENU SECTION */
+/* ############################################### */
+
+
+.menu-bar{
+  text-align: center;
+  display: inline-flex;
+  list-style: none;
+}
+
+.menu-bar li {
+  width: 120px;
+  margin: 10px;
+  margin-top: -5px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+
+
+/* ############################################### */
+/* LOGIN & LOGOUT BUTTON SECTION */
+/* ############################################### */
+.account-button{
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.accoount-logout-button{
+  background-color: rgba(255, 0, 0, 0.683);
+  height: 40px;
+  width: 170px;
+  text-transform: uppercase;
+  margin-left: 30px;
+}
+
+.accoount-logout-button:hover {
+  background: rgba(238, 19, 11, 0.848);
+  font-weight: 500;
+  letter-spacing: .5px;
+}
+.accoount-logout-button:hover{
+  border: 1px solid;
+  text-shadow: 1px 1px 2px #427388;
+}
+

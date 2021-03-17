@@ -8,6 +8,9 @@ body {
 
                                     /* LIST OF ITEMS PAGE */
 
+.page-content{
+  padding-top: 150px;
+}
 /*Align the title to the center of the page*/
 .table{
 	font-size: 13px;

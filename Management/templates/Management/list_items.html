@@ -5,58 +5,58 @@
 {% block content %} 
 <!-- LIST OF ITEMS HTML PAGE -->
 
-<link href="{% static 'css/Management.css' %}" rel="stylesheet">
 
-<!-- Loop To Display Success Message -->
-{% if messages %}
-<ul class="messages">
-       {% for message in messages %}
-             <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-       {% endfor %}
-</ul>
-{% endif %}
+<div class="page-content"">
+    <!-- Loop To Display Success Message -->
+    {% if messages %}
+    <ul class="messages">
+          {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+          {% endfor %}
+    </ul>
+    {% endif %}
 
-<div class="ListHeader">{{ListHeader}}</div> 
+    <div class="ListHeader">{{ListHeader}}</div> 
 
 
-<form method='POST' action=''>{% csrf_token %}
-    {{form}}
-        <input type="submit" value='Search'/>
-</form>
-<br>
+    <form method='POST' action=''>{% csrf_token %}
+        {{form}}
+            <input type="submit" value='Search'/>
+    </form>
+    <br>
 
-<table class='table'>
-    <thead>
-      <tr>
-        <th>COUNT</th>
-        <th>CATEGORY</th>
-        <th>ITEM NAME</th>
-        <th>QUANTITY IN STORE</th>
-        <th>REORDER LEVEL</th>
-        <th>TIME STAMP</th>
-      </tr>
-    </thead>
-    <!-- Loop To Get Itemname and Quantity In Database -->
-  {% for instance in queryset %}
-      <tr>
-        <td>{{forloop.counter}}</td>
-        <td>{{instance.category}}</td>
-        <td><a href="{% url 'stock_detail' instance.id %}">{{instance.item_name}}</a></td>
-        <td>
-            {% if instance.quantity <= instance.reorder_level %}
-                <div style="background-color: orange;">
-                  {{instance.quantity}}
-                </div>
-            {% else %}
-                  {{instance.quantity}}
-            {% endif %}
-        </td>
-        <td><a href="{% url 'reorder_level' instance.id %}">{{instance.reorder_level}}</a></td>
-        <td>{{instance.timestamp}}</td>
-      </tr>
-  {% endfor %}
-</table>
-
+    <table class='table'>
+        <thead>
+          <tr>
+            <th>COUNT</th>
+            <th>CATEGORY</th>
+            <th>ITEM NAME</th>
+            <th>QUANTITY IN STORE</th>
+            <th>REORDER LEVEL</th>
+            <th>TIME STAMP</th>
+          </tr>
+        </thead>
+        <!-- Loop To Get Itemname and Quantity In Database -->
+      {% for instance in queryset %}
+          <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{instance.category}}</td>
+            <td><a href="{% url 'stock_detail' instance.id %}">{{instance.item_name}}</a></td>
+            <td>
+                {% if instance.quantity <= instance.reorder_level %}
+                    <div style="background-color: orange;">
+                      {{instance.quantity}}
+                    </div>
+                {% else %}
+                      {{instance.quantity}}
+                {% endif %}
+            </td>
+            <td><a href="{% url 'reorder_level' instance.id %}">{{instance.reorder_level}}</a></td>
+            <td>{{instance.timestamp}}</td>
+          </tr>
+      {% endfor %}
+    </table>
+</div>
 
 <!-- COLLAPSE LIST OF ITEMS HTML PAGE -->
 {%endblock%}

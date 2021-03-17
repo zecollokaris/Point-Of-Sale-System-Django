@@ -1,0 +1,148 @@
+    {% load static%} 
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/collologo.png" type="image/x-icon"><meta name="Nav app" content="Nav Bar" />
+</head>
+
+<body>
+            <!--####################################################################################################################################-->
+            <!--####################################################################################################################################-->
+                                                            <!-- 🖥️ DESKTOP TRANSPARENT NAV BAR   -->
+                                            <!-- (Nav Bar Before Sroll when it has A Transparent Background) -->
+            <!--####################################################################################################################################-->
+            <!-- NAV BAR LOGO  -->
+            <header class="header1">
+                <h1 style="display: none;">Logo</h1>
+                <a href="/" class="dentity"> <img style="height: 70px; width: 80px;" src="../../../static/images/poslogo.png" alt="Main Logo"></a>
+                
+                
+                <!--NAVIGATION SECTION-->
+                <nav class="nav1">
+                    <div class="desktop-nav-container">
+                        <ul class="menu-bar">
+                            <li class="active"><a href="">Home</a></li>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Home</a></li>
+
+                            <div class="account-button">
+                              {% if request.user.is_authenticated %}
+                              <div>
+                                <a href="/accounts/logout"><button class="accoount-logout-button">{{ user }} | Logout </button></a>
+                              </div>
+                              {% else %}
+                              <div>
+                                <a href="/accounts/login">Login</a>
+                              </div>
+                              {% endif %}
+                            </div>
+
+
+                        </ul>
+                        
+
+
+
+                    </div>
+                </nav>
+                <!--CLOSE NAVIGATION SECTION-->
+                
+            </header>
+            <!--####################################################################################################################################-->
+                                                            <!-- COLLAPSE DESKTOP TRANSPARENT NAV BAR -->
+            <!--####################################################################################################################################-->
+
+            
+
+
+
+
+
+
+            <!--####################################################################################################################################-->
+            <!--####################################################################################################################################-->
+                                                                    <!--🖥️ DESKTOP WHITE NAV-BAR -->
+                                                <!-- (White Nav Bar After Sroll when it has A White Background)  -->
+            <!--####################################################################################################################################-->
+            <!-- NAV BAR LOGO  -->
+            <header id="sticky_nav" class="header2">
+                <h1 style="display: none;">Logo</h1>
+                <a href="/" class="dentity"> <img style="height: 70px; width: 80px;" src="../../../static/images/poslogo.png" alt="Main Logo"></a>
+                
+
+
+                <!--NAVIGATION SECTION-->
+                <nav class="nav2">
+                        <div class="desktop-nav-container">
+                            <ul id="menu-bar" class="menu-bar">
+                              <ul class="menu-bar">
+                                <li class="active"><a href="">Home</a></li>
+                                <li><a href="">Home</a></li>
+                                <li><a href="">Home</a></li>
+                                
+                                <div class="account-button">
+                                  {% if request.user.is_authenticated %}
+                                  <div>
+                                    <a href="/accounts/logout"><button class="accoount-logout-button">{{ user }} | Logout </button></a>
+                                  </div>
+                                  {% else %}
+                                  <div>
+                                    <a href="/accounts/login">Login</a>
+                                  </div>
+                                  {% endif %}
+                                </div>
+
+                            </ul>
+
+                        </div>
+
+                </nav>
+                <!--CLOSE NAVIGATION SECTION-->
+
+            </header>
+            <!--####################################################################################################################################-->
+                                                                <!--COLLAPSE DESKTOP WHITE NAV-BAR -->
+            <!--####################################################################################################################################--> 
+
+
+
+
+
+
+
+            <div class="wrapper home-container">
+                <section class="home-container">
+                        <div class="loom-content">
+                            <!-- CONTENT SECTION -->
+                                <div class="Loom-Home-Content" style="margin-top: 200px;">
+     
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa corrupti quasi maiores totam aspernatur quos l</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa corrupti quasi maiores totam aspernatur quos l</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa corrupti quasi maiores totam aspernatur quos l</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa corrupti quasi maiores totam aspernatur quos l</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa corrupti quasi maiores totam aspernatur quos l</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa corrupti quasi maiores totam aspernatur quos l</p>
+
+
+                                </div>
+                            <!--CLOSE CONTENT SECION -->
+                        </div>
+                        <p>© 2020 LoomCar, Inc.</p>
+
+                </section>
+
+                
+
+
+
+
+            </div>
+
+            
+
+            
+</body>
+
+</html>
+

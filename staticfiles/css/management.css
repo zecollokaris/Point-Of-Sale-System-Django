@@ -1,0 +1,56 @@
+
+body {
+    min-height: 75rem;
+}
+ 
+
+/* ######################################################################################### */
+
+                                    /* LIST OF ITEMS PAGE */
+
+.page-content{
+  padding-top: 150px;
+}
+/*Align the title to the center of the page*/
+.table{
+	font-size: 13px;
+	text-align: center;
+	width: 95%;
+	margin: auto;
+}
+
+/*Make alternating colors for the table rows*/
+.table tr:nth-child(odd){
+	background: #B8CAE4
+}
+
+.table tr:nth-child(even){
+	background: #dae5f4
+}
+
+th {
+  background-color: #337ab7;
+  color: white;
+}
+
+.ListHeader {
+    font-family: helvetica;
+    color: #337ab7;
+    font-size: 50px;
+    text-align: center;
+    width: 100%;
+    text-shadow: 6px 6px 6px #c9c6c6;
+    display: block;
+    font-weight: bolder;
+}
+
+/* ######################################################################################### */
+
+
+.success{
+     list-style: none;
+     background-color: #2e6da4;
+     color: white;
+     box-shadow: 12px 12px 12px #e61c66;
+     text-align: center;
+}

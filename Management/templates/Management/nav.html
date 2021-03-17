@@ -22,9 +22,9 @@
                 <nav class="nav1">
                     <div class="desktop-nav-container">
                         <ul class="menu-bar">
-                            <li class="active"><a href="">Home</a></li>
-                            <li><a href="">Home</a></li>
-                            <li><a href="">Home</a></li>
+                            <li class="active"><a href="/">Home</a></li>
+                            <li><a href="/list_items">List Items</a></li>
+                            <li><a href="/add_items">Add Items</a></li>
 
                             <div class="account-button">
                               {% if request.user.is_authenticated %}
@@ -33,7 +33,7 @@
                               </div>
                               {% else %}
                               <div>
-                                <a href="/accounts/login">Login</a>
+                                <a href="/accounts/login"><button class="account-login-button">Login</button></a>
                               </div>
                               {% endif %}
                             </div>
@@ -77,9 +77,9 @@
                         <div class="desktop-nav-container">
                             <ul id="menu-bar" class="menu-bar">
                               <ul class="menu-bar">
-                                <li class="active"><a href="">Home</a></li>
-                                <li><a href="">Home</a></li>
-                                <li><a href="">Home</a></li>
+                                <li class="active"><a href="/">Home</a></li>
+                                <li><a href="/list_items">List Items</a></li>
+                                <li><a href="/add_items">Add Items</a></li>
                                 
                                 <div class="account-button">
                                   {% if request.user.is_authenticated %}
@@ -88,7 +88,7 @@
                                   </div>
                                   {% else %}
                                   <div>
-                                    <a href="/accounts/login">Login</a>
+                                    <a href="/accounts/login"><button class="account-login-button">Login</button></a>
                                   </div>
                                   {% endif %}
                                 </div>
@@ -101,47 +101,19 @@
                 <!--CLOSE NAVIGATION SECTION-->
 
             </header>
+
             <!--####################################################################################################################################-->
                                                                 <!--COLLAPSE DESKTOP WHITE NAV-BAR -->
             <!--####################################################################################################################################--> 
-
-
-
-
-
-
-
             <div class="wrapper home-container">
-                <section class="home-container">
-                        <div class="loom-content">
-                            <!-- CONTENT SECTION -->
-                                <div class="Loom-Home-Content" style="margin-top: 200px;">
-     
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa corrupti quasi maiores totam aspernatur quos l</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa corrupti quasi maiores totam aspernatur quos l</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa corrupti quasi maiores totam aspernatur quos l</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa corrupti quasi maiores totam aspernatur quos l</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa corrupti quasi maiores totam aspernatur quos l</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa corrupti quasi maiores totam aspernatur quos l</p>
-
-
-                                </div>
-                            <!--CLOSE CONTENT SECION -->
-                        </div>
-                        <p>© 2020 LoomCar, Inc.</p>
-
-                </section>
-
-                
 
 
 
 
             </div>
 
-            
 
-            
+
 </body>
 
 </html>

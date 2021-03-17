@@ -225,21 +225,12 @@ a.identity:hover img {
   border: 1px solid;
   text-shadow: 1px 1px 2px #427388;
 }
-.account-login-button{
-  background-color: rgba(0, 166, 255, 0.683);
-  height: 37px;
-  width: 130px;
+.accoount-login-button{
+  background-color: rgba(255, 0, 0, 0.683);
+  height: 40px;
+  width: 170px;
   text-transform: uppercase;
   margin-left: 30px;
-}
-.account-login-button:hover {
-  background: rgba(11, 196, 238, 0.848);
-  font-weight: 500;
-  letter-spacing: .5px;
-}
-.account-login-button:hover{
-  border: 1px solid;
-  text-shadow: 1px 1px 2px #427388;
 }
 /* ############################################### */
 /* LOGIN & LOGOUT BUTTON SECTION */

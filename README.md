@@ -10,13 +10,14 @@ This is a Point Of Sale System that tracks the stock in a shop and users
 
 - You need to have (python3.8) installed in your machine
 
-- Python3.8. Installation ($ sudo apt-get install python3.8).
+- Python3.8. Installation ```$ sudo apt-get install python3.8```
 
-- Django3.17. Installation ($ pip install django==3.17).
+- Django3.17. Installation ```$ pip install django==3.17```
 
-- Psycopg2. Installation ($ pip install psycopg2).
+- Psycopg2. Installation ```$ pip install psycopg2```
 
-- Bootstrap4. Installation ($ pip install django-bootstrap4).
+- Bootstrap4. Installation ```$ pip install django-bootstrap4```
+
 
 
 # SETUP/INSTALLATION REQUIREMENTS.

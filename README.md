@@ -1,4 +1,4 @@
-# <p align="center"> POINT OF SALE SYSTEM <p>
+# <p align="center"> :shopping: POINT OF SALE SYSTEM <p>
 
 # DESCRIPTION
 

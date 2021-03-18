@@ -164,11 +164,11 @@ def reorder_level(request, pk):
 
 
 #################################################################################################################################################################################
-#REORDER LEVEL PAGE VIEW FUNCTION
+#REGISTRATION & LOGIN PAGE VIEW FUNCTION
 #################################################################################################################################################################################
 
 
-#Login page view function
+#Registration & Login page view function
 def login(request):
     return render(request, 'Registration/login.html')
 
